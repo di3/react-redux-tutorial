@@ -1,0 +1,30 @@
+<IfModule mod_headers.c>
+	<FilesMatch "\.html\.gz$">
+	  ForceType text/html
+	  Header set Content-Encoding: gzip
+	</FilesMatch>
+ 
+	<FilesMatch "\.js\.gz$">
+	  ForceType text/javascript
+	  Header set Content-Encoding: gzip
+	</FilesMatch>
+ 
+	<FilesMatch "\.css\.gz$">
+	  ForceType text/css
+	  Header set Content-Encoding: gzip
+	</FilesMatch>
+
+	<FilesMatch "\.(ttf|ttc|otf|eot|woff|svg)$">
+		Header set Access-Control-Allow-Origin "*"
+	</FilesMatch>
+
+	RewriteEngine on
+	RewriteCond %{HTTP:Accept-encoding} gzip
+	RewriteCond %{REQUEST_FILENAME} \.(js|css)$
+	RewriteCond %{REQUEST_FILENAME}.gz -f
+	RewriteRule ^(.*)$ /$1.gz [L]
+
+</IfModule>
+
+FallbackResource /index.html
+
