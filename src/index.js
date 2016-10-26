@@ -25,7 +25,7 @@ var reducer = function (state = 0, action) {
 function add(payload) { return {type:'ADD',payload} };
 function rem(payload) { return {type:'REM',payload} };
 
-var store = createStore(reducer),applyMiddleware(thunk));
+var store = createStore(reducer,applyMiddleware(thunk));
 
 //we have a store with a reducer and some actions.
 
@@ -49,7 +49,7 @@ var AppComponent = React.createClass({
     this.props.add(100);
   },
   handleClickAdd: function () {
-    this.props.ddd(5);
+    this.props.add(5);
   },
   handleClickRem: function () {
     this.props.rem(5);
