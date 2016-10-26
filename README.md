@@ -3,11 +3,13 @@ basic react redux tutorial
 
 
 
-1. install node_modules in package.json direcotry
-`npm install`
-2. build from [build.js](https://github.com/di3/react-build)
-`node build.js`
-3. use the webroot ./public/
-4. have a look at the comments [index.jsx](https://github.com/di3/react-redux-tutorial/blob/master/src/index.jsx)
+1. install required node_modules from the package.json
 
-[demo](https://di3.github.io/react-redux-tutorial/public)
+`npm install`
+2. use build.js from [react-build](https://github.com/di3/react-build)
+
+`node build.js`
+3. use the `./public/` folder for your webroot
+4. have a look at the comments [src/index.js](https://github.com/di3/react-redux-tutorial/blob/master/src/index.jsx)
+
+have a look at the [demo](https://di3.github.io/react-redux-tutorial/public)
