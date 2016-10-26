@@ -9,3 +9,5 @@ basic react redux tutorial
 `node build.js`
 3. use the webroot ./public/
 4. have a look at the comments [index.jsx](https://github.com/di3/react-redux-tutorial/blob/master/src/index.jsx)
+
+[demo](https://di3.github.io/react-redux-tutorial/public)
